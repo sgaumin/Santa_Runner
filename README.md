@@ -1,4 +1,4 @@
-# TemplateGJ_2D
-Project template for 2D prototype or game jam.
+# YogscastGameJam
+Project made during the Yogscast GameJam.
 
-For Unity 2019.1.9f1.
+For Unity 2019.2.15.
