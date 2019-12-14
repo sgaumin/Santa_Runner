@@ -52,6 +52,8 @@ public class Game : GameSystem
 	protected void Start()
 	{
 		GameState = GameStates.Play;
+
+		FadScreen.Instance.FadIn(Color.black);
 		OnStartGame?.Invoke();
 	}
 
@@ -60,7 +62,19 @@ public class Game : GameSystem
 		base.Update();
 	}
 
-	public void PlayAgain() => LevelLoader.ReloadLevel();
+	public void PlayAgain() => StartCoroutine(PlayAgainCore());
 
-	public void LoadMenu() => LevelLoader.LoadLevelByIndex(0);
+	private IEnumerator PlayAgainCore()
+	{
+		yield return FadScreen.Instance.FadOutCore(Color.black);
+		LevelLoader.ReloadLevel();
+	}
+
+	public void LoadMenu() => StartCoroutine(LoadMenuCore());
+
+	private IEnumerator LoadMenuCore()
+	{
+		yield return FadScreen.Instance.FadOutCore(Color.black);
+		LevelLoader.LoadLevelByIndex(0);
+	}
 }
