@@ -13,6 +13,10 @@ public class PlayerShooting : MonoBehaviour
 	[SerializeField] private GameObject refWind;
 	[SerializeField] private GameObject hitPlane;
 
+	[Header("ScreenShake Parameters")]
+	[SerializeField, Range(0f, 1f)] private float amplitude = 0.1f;
+	[SerializeField, Range(0f, 1f)] private float duration = 0.2f;
+
 	private float last_shot_time;
 
 	int layer_mask;
@@ -47,6 +51,8 @@ public class PlayerShooting : MonoBehaviour
 						last_shot_time = Time.time;
 					}
 				}
+
+				ScreenShake.Instance.Shake(amplitude, duration);
 			}
 		}
 	}
