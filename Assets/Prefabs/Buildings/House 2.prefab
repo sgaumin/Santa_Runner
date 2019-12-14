@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3881696057333644908}
   - component: {fileID: 7194772844545286494}
   - component: {fileID: 4248004007978176966}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: House 2
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,8 +91,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01620513, y: 0.019999998, z: 0.03831182}
-  m_Center: {x: 0.00010181142, y: -1.2459381e-16, z: 0.019155908}
+  m_Size: {x: 0.01620513, y: 0.019999998, z: 0.047129672}
+  m_Center: {x: 0.000101811056, y: -8.5463255e-17, z: 0.023564836}
 --- !u!1 &1573895324929769485
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 2795765605664695081}
   - component: {fileID: 7568331226424813994}
   - component: {fileID: 7203029635331286039}
+  - component: {fileID: 312272390225579832}
   m_Layer: 12
   m_Name: Chimney
   m_TagString: Chimney
@@ -171,3 +172,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &312272390225579832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573895324929769485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.013461813, y: 0.0134618115, z: 0.024401553}
+  m_Center: {x: -0.005187756, y: -0.007126012, z: -0.0012222773}
