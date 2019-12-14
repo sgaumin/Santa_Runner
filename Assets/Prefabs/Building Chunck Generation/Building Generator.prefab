@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b62a3e6b286f04d8a01e3ca502b89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunckMovementSpeed: 0.1
+  chunckMovementSpeed: 0.05
   spawner: {fileID: 285265430104525746}
   chuncks:
   - {fileID: 7928747329475506690, guid: 9ac43bc10e7b9384ea071590a67b4390, type: 3}
