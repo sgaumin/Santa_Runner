@@ -16,7 +16,15 @@ public class Game : GameSystem
 
 	public GameStates GameState { get; set; } = GameStates.MainMenu;
 
-	protected override void Awake()
+    public enum GameStates
+    {
+        MainMenu,
+        Play,
+        GameOver,
+        Pause
+    }
+
+    protected override void Awake()
 	{
 		base.Awake();
 		Instance = this;
