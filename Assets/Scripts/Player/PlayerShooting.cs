@@ -42,7 +42,7 @@ public class PlayerShooting : MonoBehaviour
 					{
 						Vector3 finalClickPos = hit.point;
 						// Debug.Log("finalClickPos " + finalClickPos);
-						GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
+						GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos), transform);
 						present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
 						last_shot_time = Time.time;
 					}
