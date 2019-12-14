@@ -4,5 +4,13 @@ using UnityEngine;
 
 public class StartMenuManager : MonoBehaviour
 {
-	public void LoadGame() => LevelLoader.LoadNextLevel();
+	private void Start() => FadScreen.Instance.FadIn(Color.black);
+
+	public void LoadGame() => StartCoroutine(LoadGameCore());
+
+	private IEnumerator LoadGameCore()
+	{
+		yield return FadScreen.Instance.FadOutCore(Color.black);
+		LevelLoader.LoadNextLevel();
+	}
 }
