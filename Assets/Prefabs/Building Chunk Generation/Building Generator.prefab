@@ -122,6 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startChunckMovementSpeed: 0.05
   durationBeforeStoping: 3
+  difficultyFactor: 1
+  difficultyLadder: 030000000500000007000000
   spawner: {fileID: 285265430104525746}
   chuncks:
   - {fileID: 7928747329475506690, guid: 9ac43bc10e7b9384ea071590a67b4390, type: 3}
