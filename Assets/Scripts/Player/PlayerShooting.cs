@@ -9,8 +9,6 @@ public class PlayerShooting : MonoBehaviour
 	[SerializeField] private float shootCDSeconds = 0.5f;
 
 	[SerializeField] private GameObject presentPrefab;
-	[SerializeField] private GameObject refGM;
-	[SerializeField] private GameObject refWind;
 	[SerializeField] private GameObject hitPlane;
 
 	[Header("ScreenShake Parameters")]

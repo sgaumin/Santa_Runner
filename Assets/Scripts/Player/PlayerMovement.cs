@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private float movementSpeed = 100f;
 	[SerializeField] private float screenBoundaryBuffer = 20f; // Adjust how far off screen player can go
 	[SerializeField] private string deathColliderTag = "Building";
-	[SerializeField] private GameObject refWind;
 
 	private Vector3 movement;
 	private Rigidbody body;
@@ -30,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 			body.AddForce(movement * movementSpeed * Time.deltaTime, ForceMode.Impulse);
 
 			// Apply wind, can disable on Wind object inspector
-			Vector3 wind_vel = refWind.GetComponent<WindBehavior>().GetWindVel();
+			Vector3 wind_vel = WindBehavior.Instance.GetWindVel();
 			body.AddForce(wind_vel * Time.deltaTime);
 
 			// Only move player if on screen, else stop the play on screen boundaries IF the player has enough velocity to push past boundary
