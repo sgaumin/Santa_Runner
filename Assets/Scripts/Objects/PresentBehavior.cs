@@ -19,13 +19,6 @@ public class PresentBehavior : MonoBehaviour
 		body.AddForce(wind_vel * Time.deltaTime * wind_scale);
 	}
 
-	// Delete self when invisible to clear up memory resources
-	private void OnBecameInvisible()
-	{
-		//Debug.Log("Destroying present");
-		Destroy(this.gameObject);
-	}
-
 	private void OnCollisionEnter(Collision collision)
 	{
 		//Debug.Log(collision.gameObject.tag);
