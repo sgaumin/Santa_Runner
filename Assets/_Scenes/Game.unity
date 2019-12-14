@@ -127,6 +127,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 881874216, guid: 701ec6830cd67c94393aaa128d30a509, type: 3}
+      propertyPath: enable_wind
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5031145919699137708, guid: 701ec6830cd67c94393aaa128d30a509,
         type: 3}
       propertyPath: m_Name
