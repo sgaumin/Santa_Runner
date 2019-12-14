@@ -59,4 +59,5 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   pauseMenu: {fileID: 0}
   gameOverMenu: {fileID: 0}
+  gameUI: {fileID: 0}
   buildingGenerator: {fileID: 0}
