@@ -22,7 +22,7 @@ public class PlayerShooting : MonoBehaviour
             Plane plane = new Plane(Vector3.up, Vector3.zero);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray.origin, ray.direction, Mathf.Infinity, layer_mask).OrderBy(h => h.distance).ToArray();
-            Debug.Log("hits:" + hits.Length);
+            //Debug.Log("hits:" + hits.Length);
             // Debug.Log("hits:" + hits.Length);
             for (int i = 0; i < hits.Length; i++)
             {
