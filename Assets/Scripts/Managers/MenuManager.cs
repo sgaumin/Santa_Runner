@@ -39,7 +39,6 @@ public class MenuManager : MonoBehaviour
 					toggleGameOverMenu(true);
 					break;
 				case Game.GameStates.Play:
-					Game.Instance.PlayerReset();
 					togglePlaySceen(true);
 					break;
 				case Game.GameStates.Pause:

@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,9 +12,6 @@ using UnityEngine.UI;
 
 public class Game : GameSystem
 {
-	[SerializeField] private Vector3 playerStartingPos;
-	[SerializeField] private GameObject player;
-
 	public delegate void GameEventHandler();
 	public event GameEventHandler OnStartGame;
 	public event GameEventHandler OnGameOver;
@@ -61,21 +58,6 @@ public class Game : GameSystem
 	protected override void Update()
 	{
 		base.Update();
-	}
-
-	public void PlayerReset()
-	{
-		// Reset Player Position
-		player.transform.position = playerStartingPos;
-		// Remove Momentum
-		player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-		// Delete Existing Present
-		GameObject[] presents = GameObject.FindGameObjectsWithTag("Present");
-		foreach (GameObject present in presents)
-		{
-			Destroy(present);
-		}
-		// TODO: Reset Building Generator
 	}
 
 	public void PlayAgain() => LevelLoader.ReloadLevel();
