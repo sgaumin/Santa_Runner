@@ -15,6 +15,10 @@ public class Game : GameSystem
 	[SerializeField] private Vector3 playerStartingPos;
 	[SerializeField] private GameObject player;
 
+	public delegate void GameEventHandler();
+	public event GameEventHandler OnStartGame;
+	public event GameEventHandler OnGameOver;
+
 	public static Game Instance { get; private set; }
 
 	private GameStates gameState;
@@ -26,6 +30,11 @@ public class Game : GameSystem
 		{
 			gameState = value;
 			MenuManager.Instance.updateByGameState();
+
+			if (gameState == GameStates.GameOver)
+			{
+				OnGameOver?.Invoke();
+			}
 		}
 	}
 
@@ -46,6 +55,7 @@ public class Game : GameSystem
 	protected void Start()
 	{
 		GameState = GameStates.Play;
+		OnStartGame?.Invoke();
 	}
 
 	protected override void Update()

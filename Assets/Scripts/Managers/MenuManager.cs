@@ -6,11 +6,9 @@ public class MenuManager : MonoBehaviour
 {
 	public static MenuManager Instance { get; private set; }
 
-	//[SerializeField] private GameObject mainMenu;
 	[SerializeField] private GameObject pauseMenu;
 	[SerializeField] private GameObject gameOverMenu;
 	[SerializeField] private GameObject gameUI;
-	[SerializeField] private GameObject buildingGenerator;
 
 	[SerializeField] public bool movementEnabled { get; set; }
 
@@ -33,23 +31,26 @@ public class MenuManager : MonoBehaviour
 	{
 		disableAll();
 
-		switch (Game.Instance.GameState)
+		if (Game.Instance != null)
 		{
-			case Game.GameStates.GameOver:
-				toggleGameOverMenu(true);
-				break;
-			case Game.GameStates.Play:
-				Game.Instance.PlayerReset();
-				togglePlaySceen(true);
-				break;
-			case Game.GameStates.Pause:
-				Time.timeScale = 0;
-				togglePauseMenu(true);
-				break;
-				//case Game.GameStates.MainMenu:
-				//default:
-				//    toggleMainMenu(true);
-				//    break;
+			switch (Game.Instance.GameState)
+			{
+				case Game.GameStates.GameOver:
+					toggleGameOverMenu(true);
+					break;
+				case Game.GameStates.Play:
+					Game.Instance.PlayerReset();
+					togglePlaySceen(true);
+					break;
+				case Game.GameStates.Pause:
+					Time.timeScale = 0;
+					togglePauseMenu(true);
+					break;
+					//case Game.GameStates.MainMenu:
+					//default:
+					//    toggleMainMenu(true);
+					//    break;
+			}
 		}
 	}
 
