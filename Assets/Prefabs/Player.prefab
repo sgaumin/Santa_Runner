@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d0ec8f8ce1a234fb8d90a47070bd9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 100
+  movementSpeed: 200
 --- !u!114 &6717592137948332982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
   presentPrefab: {fileID: 4620183742132860875, guid: 1390b9be39d8e0e44806324399278fea,
     type: 3}
   hitPlane: {fileID: 0}
-  presentSpeed: 0
+  presentSpeed: 10
 --- !u!1 &3823299225035474459
 GameObject:
   m_ObjectHideFlags: 0

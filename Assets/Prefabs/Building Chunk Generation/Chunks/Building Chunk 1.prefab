@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5613282187672491399}
   - component: {fileID: 7928747329475506690}
   m_Layer: 0
-  m_Name: Building Chunck 1
+  m_Name: Building Chunk 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,8 +66,8 @@ GameObject:
   - component: {fileID: 7712312167818737571}
   - component: {fileID: 4551718662116810512}
   m_Layer: 0
-  m_Name: End Chunck
-  m_TagString: EndChunck
+  m_Name: End Chunk
+  m_TagString: EndChunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

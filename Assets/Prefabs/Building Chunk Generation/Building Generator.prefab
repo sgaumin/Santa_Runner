@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5646062851163698745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b62a3e6b286f04d8a01e3ca502b89d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7857391b57ad19e4d9ae23c849f1d62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chunckMovementSpeed: 0.05
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 2666879467939101611}
   - component: {fileID: 4534357103848798128}
   m_Layer: 0
-  m_Name: Chunck Creation Trigger
+  m_Name: Chunk Creation Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 285265430104525746}
   m_Layer: 0
-  m_Name: Building Chunck Spawner
+  m_Name: Building Chunk Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

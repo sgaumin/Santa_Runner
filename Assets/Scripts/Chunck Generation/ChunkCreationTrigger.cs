@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChunckCreationTrigger : MonoBehaviour
+public class ChunkCreationTrigger : MonoBehaviour
 {
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("EndChunck"))
+		if (other.CompareTag("EndChunk"))
 		{
-			BuildingChunckGenerator.Instance.SpawnChunck();
+			BuildingChunkGenerator.Instance.SpawnChunk();
 		}
 	}
 }
