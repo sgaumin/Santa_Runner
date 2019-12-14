@@ -65,6 +65,7 @@ MonoBehaviour:
   movementSpeed: 200
   screenBoundaryBuffer: 20
   collisionTag: Building
+  ref_menu: {fileID: 0}
 --- !u!114 &6717592137948332982
 MonoBehaviour:
   m_ObjectHideFlags: 0
