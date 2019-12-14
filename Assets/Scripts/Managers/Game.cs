@@ -48,7 +48,7 @@ public class Game : GameSystem
 		GameState = GameStates.Play;
 	}
 
-	protected void Update()
+	protected override void Update()
 	{
 		base.Update();
 	}
@@ -67,4 +67,6 @@ public class Game : GameSystem
 		}
 		// TODO: Reset Building Generator
 	}
+
+	public void PlayAgain() => LevelLoader.ReloadLevel();
 }
