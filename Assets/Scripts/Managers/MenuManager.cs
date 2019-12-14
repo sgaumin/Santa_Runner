@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
+    public static MenuManager Instance { get; private set; }
 
-    [SerializeField] private GameObject mainMenu;
+    //[SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private GameObject gameUI;
@@ -13,17 +14,14 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] public bool movementEnabled { get; set; }
 
-    Game gameManager;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        gameManager = this.GetComponent<Game>();
+        Instance = this;
         updateByGameState();
     }
 
     void updateByGameState() {
-        updateByGameState(gameManager.GameState);
+        updateByGameState(Game.Instance.GameState);
     }
 
     private void Update()
@@ -43,28 +41,28 @@ public class MenuManager : MonoBehaviour
                 toggleGameOverMenu(true);
                 break;
             case Game.GameStates.Play:
-                gameManager.playerReset();
+                Game.Instance.playerReset();
                 togglePlaySceen(true);
                 break;
             case Game.GameStates.Pause:
                 Time.timeScale = 0;
                 togglePauseMenu(true);
                 break;
-            case Game.GameStates.MainMenu:
-            default:
-                toggleMainMenu(true);
-                break;
+            //case Game.GameStates.MainMenu:
+            //default:
+            //    toggleMainMenu(true);
+            //    break;
         }
     }
 
     public void toState(string state) {
-        this.GetComponent<Game>().GameState = (Game.GameStates)System.Enum.Parse(typeof(Game.GameStates), state);
+        Game.Instance.GameState = (Game.GameStates)System.Enum.Parse(typeof(Game.GameStates), state);
         updateByGameState();
     }
 
     public void toState(Game.GameStates state)
     {
-        this.GetComponent<Game>().GameState = state;
+        Game.Instance.GameState = state;
         updateByGameState();
     }
 
@@ -75,15 +73,15 @@ public class MenuManager : MonoBehaviour
         // Disable All Menus
         toggleGameOverMenu(false);
         togglePauseMenu(false);
-        toggleMainMenu(false);
+        //toggleMainMenu(false);
         // Disable Player Movement
         togglePlaySceen(false);
         // Disable Score and Lives UI
     }
 
-    void toggleMainMenu(bool state){
-        mainMenu.SetActive(state);
-    }
+    //void toggleMainMenu(bool state){
+    //    mainMenu.SetActive(state);
+    //}
 
     void togglePauseMenu(bool state)
     {

@@ -17,11 +17,11 @@ public class Game : GameSystem
 
     public static Game Instance { get; private set; }
 
-	public GameStates GameState { get; set; } = GameStates.MainMenu;
+	public GameStates GameState { get; set; } = GameStates.Play;
 
     public enum GameStates
     {
-        MainMenu,
+        //MainMenu,
         Play,
         GameOver,
         Pause
