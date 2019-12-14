@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3823299223577505548}
   - component: {fileID: 3823299223577505539}
   - component: {fileID: 3823299223577505538}
+  - component: {fileID: 6717592137948332982}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -62,6 +63,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 100
+--- !u!114 &6717592137948332982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823299223577505537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff232fe7290f70445a7754ebdc6d6104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  presentPrefab: {fileID: 4620183742132860875, guid: 1390b9be39d8e0e44806324399278fea,
+    type: 3}
+  hitPlane: {fileID: 0}
+  presentSpeed: 0
 --- !u!1 &3823299225035474459
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +137,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b9536c058f64dc341bc1f7f00baad6e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
