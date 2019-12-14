@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 		movement.x = Input.GetAxis("Horizontal");
 		movement.z = Input.GetAxis("Vertical");
 
-		body.AddForce(movement * movementSpeed * Time.deltaTime);
+		body.AddForce(movement * movementSpeed * Time.deltaTime, ForceMode.Impulse);
 
         // Only move player if on screen, else stop the play on screen boundaries IF the player has enough velocity to push past boundary
         // Also reset the moving velocity in the direction of collision to allow faster recovery in opposite direction
