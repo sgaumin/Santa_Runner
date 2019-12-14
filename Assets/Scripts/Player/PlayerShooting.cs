@@ -54,6 +54,7 @@ public class PlayerShooting : MonoBehaviour
 				}
 
 				ScreenShake.Instance.Shake(amplitude, duration);
+				CrosshairController.Instance.ClickAnimation();
 			}
 		}
 	}
