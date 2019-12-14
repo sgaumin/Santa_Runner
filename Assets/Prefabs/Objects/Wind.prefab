@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6392325358868006041}
   - component: {fileID: 881874216}
+  - component: {fileID: 961994357}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Untagged
@@ -43,9 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7674af620a0c21c4f810e0c299ef1a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enable_wind: 0
+  enable_wind: 1
   minMagnitude: 0
   maxMagnitude: 50
   minChangeTimeSeconds: 10
   maxChangeTimeSeconds: 30
-  refGM: {fileID: 0}
+  windZoneEffectScale: 0.005
+--- !u!182 &961994357
+WindZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5031145919699137708}
+  m_Enabled: 1
+  m_Mode: 0
+  m_Radius: 20
+  m_WindMain: 0.25
+  m_WindTurbulence: 1
+  m_WindPulseMagnitude: 0.5
+  m_WindPulseFrequency: 0.01

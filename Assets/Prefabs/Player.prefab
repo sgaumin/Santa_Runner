@@ -65,8 +65,6 @@ MonoBehaviour:
   movementSpeed: 10
   screenBoundaryBuffer: 20
   deathColliderTag: Building
-  refGM: {fileID: 0}
-  refWind: {fileID: 0}
 --- !u!114 &6717592137948332982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,9 +81,9 @@ MonoBehaviour:
   shootCDSeconds: 0.25
   presentPrefab: {fileID: 4620183742132860875, guid: 1390b9be39d8e0e44806324399278fea,
     type: 3}
-  refGM: {fileID: 0}
-  refWind: {fileID: 0}
   hitPlane: {fileID: 0}
+  amplitude: 0.1
+  duration: 0.2
 --- !u!1 &3823299225035474459
 GameObject:
   m_ObjectHideFlags: 0

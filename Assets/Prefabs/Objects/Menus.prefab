@@ -1567,6 +1567,7 @@ GameObject:
   - component: {fileID: 1827761284516077435}
   - component: {fileID: 5076303731476596379}
   - component: {fileID: 6599572634631952726}
+  - component: {fileID: 1793462783}
   m_Layer: 5
   m_Name: Wind Indicator
   m_TagString: Untagged
@@ -1588,11 +1589,11 @@ RectTransform:
   m_Father: {fileID: 792935802}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.75, y: -0.3}
-  m_AnchorMax: {x: 0.9, y: 0.1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 1, y: 1}
+  m_SizeDelta: {x: 2, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5076303731476596379
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1629,6 +1630,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1793462783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783968364324836376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009de202e98328642ae105cd47035ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenOffset: 50
 --- !u!1 &3504401615349662347
 GameObject:
   m_ObjectHideFlags: 0

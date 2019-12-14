@@ -11,8 +11,9 @@ public class WindBehavior : MonoBehaviour
 	[SerializeField] private float maxMagnitude = 5f;
 	[SerializeField] private float minChangeTimeSeconds = 10f;
 	[SerializeField] private float maxChangeTimeSeconds = 30f;
+    [SerializeField] private float windZoneEffectScale = 0.005f;
 
-	private Vector3 wind_vel;
+    private Vector3 wind_vel;
 	private float lastChangeTime;
 	private float randomChangeWait;
 
@@ -39,6 +40,10 @@ public class WindBehavior : MonoBehaviour
 		float new_mag = Random.Range(minMagnitude, maxMagnitude);
 		Vector2 unit_dir = Random.insideUnitCircle * new_mag;
 		wind_vel = new Vector3(unit_dir.x, 0, unit_dir.y);
+
+        // Update object rotation to change Wind Zone component for particle drift
+        this.transform.LookAt(wind_vel);
+        this.GetComponent<WindZone>().windMain = new_mag * windZoneEffectScale;
 
 		// Update GUI
 		if (enable_wind)

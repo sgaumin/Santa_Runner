@@ -127,14 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 881874216, guid: 701ec6830cd67c94393aaa128d30a509, type: 3}
-      propertyPath: refGM
-      value: 
-      objectReference: {fileID: 827454155}
-    - target: {fileID: 881874216, guid: 701ec6830cd67c94393aaa128d30a509, type: 3}
-      propertyPath: enable_wind
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5031145919699137708, guid: 701ec6830cd67c94393aaa128d30a509,
         type: 3}
       propertyPath: m_Name
@@ -143,17 +135,17 @@ PrefabInstance:
     - target: {fileID: 6392325358868006041, guid: 701ec6830cd67c94393aaa128d30a509,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.12205396
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6392325358868006041, guid: 701ec6830cd67c94393aaa128d30a509,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.8172
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6392325358868006041, guid: 701ec6830cd67c94393aaa128d30a509,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5061767
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6392325358868006041, guid: 701ec6830cd67c94393aaa128d30a509,
         type: 3}
@@ -324,37 +316,20 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 827454156}
-    - target: {fileID: 8350653562463260593, guid: 5279ffa63bcb8ce4f890d8a71da9eeeb,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMenu
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5279ffa63bcb8ce4f890d8a71da9eeeb, type: 3}
---- !u!1 &827454155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6654609582353141693, guid: dadc208defe9f77419feb1d4272ee167,
-    type: 3}
-  m_PrefabInstance: {fileID: 4395064014596624632}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &827454156 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7563786549937825451, guid: dadc208defe9f77419feb1d4272ee167,
     type: 3}
   m_PrefabInstance: {fileID: 4395064014596624632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827454155}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04dc52d7a03854747abbc90cc4458624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &961994356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5031145919699137708, guid: 701ec6830cd67c94393aaa128d30a509,
-    type: 3}
-  m_PrefabInstance: {fileID: 374274360}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1544739934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -511,21 +486,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3823299223577505538, guid: d4c37cba34a1abd46ad5a83d9dc78774,
-        type: 3}
-      propertyPath: screenBoundaryBuffer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823299223577505538, guid: d4c37cba34a1abd46ad5a83d9dc78774,
-        type: 3}
-      propertyPath: refWind
-      value: 
-      objectReference: {fileID: 961994356}
-    - target: {fileID: 3823299223577505538, guid: d4c37cba34a1abd46ad5a83d9dc78774,
-        type: 3}
-      propertyPath: refGM
-      value: 
-      objectReference: {fileID: 827454155}
     - target: {fileID: 3823299223577505548, guid: d4c37cba34a1abd46ad5a83d9dc78774,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -586,16 +546,6 @@ PrefabInstance:
       propertyPath: hitPlane
       value: 
       objectReference: {fileID: 1544739935}
-    - target: {fileID: 6717592137948332982, guid: d4c37cba34a1abd46ad5a83d9dc78774,
-        type: 3}
-      propertyPath: refGM
-      value: 
-      objectReference: {fileID: 827454155}
-    - target: {fileID: 6717592137948332982, guid: d4c37cba34a1abd46ad5a83d9dc78774,
-        type: 3}
-      propertyPath: refWind
-      value: 
-      objectReference: {fileID: 961994356}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4c37cba34a1abd46ad5a83d9dc78774, type: 3}
 --- !u!1001 &4395064014596624632
