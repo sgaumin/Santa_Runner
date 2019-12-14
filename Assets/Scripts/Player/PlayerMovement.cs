@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == deathColliderTag)
         {
             //Debug.Log("Player collided with a building");
-            MenuManager.Instance.toState(Game.GameStates.GameOver);
+            Game.Instance.GameState = Game.GameStates.GameOver;
         }
     }
 }

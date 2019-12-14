@@ -12,44 +12,59 @@ using UnityEngine.UI;
 
 public class Game : GameSystem
 {
-    [SerializeField] private Vector3 playerStartingPos;
-    [SerializeField] private GameObject player;
+	[SerializeField] private Vector3 playerStartingPos;
+	[SerializeField] private GameObject player;
 
-    public static Game Instance { get; private set; }
+	public static Game Instance { get; private set; }
 
-	public GameStates GameState { get; set; } = GameStates.Play;
+	private GameStates gameState;
 
-    public enum GameStates
-    {
-        //MainMenu,
-        Play,
-        GameOver,
-        Pause
-    }
+	public GameStates GameState
+	{
+		get => gameState;
+		set
+		{
+			gameState = value;
+			MenuManager.Instance.updateByGameState();
+		}
+	}
 
-    protected override void Awake()
+	public enum GameStates
+	{
+		//MainMenu,
+		Play,
+		GameOver,
+		Pause
+	}
+
+	protected override void Awake()
 	{
 		base.Awake();
 		Instance = this;
 	}
 
-	protected void Update()
+	protected void Start()
 	{
-        base.Update();
+		GameState = GameStates.Play;
 	}
 
-    public void playerReset()
-    {
-        // Reset Player Position
-        player.transform.position = playerStartingPos;
-        // Remove Momentum
-        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        // Delete Existing Present
-        GameObject[] presents = GameObject.FindGameObjectsWithTag("Present");
-        foreach (GameObject present in presents)
-        {
-            Destroy(present);
-        }
-        // TODO: Reset Building Generator
-    }
+	protected void Update()
+	{
+		base.Update();
+	}
+
+	public void PlayerReset()
+	{
+		// Reset Player Position
+		player.transform.position = playerStartingPos;
+		// Remove Momentum
+		player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+		// Delete Existing Present
+		GameObject[] presents = GameObject.FindGameObjectsWithTag("Present");
+		foreach (GameObject present in presents)
+		{
+			Destroy(present);
+		}
+		// TODO: Reset Building Generator
+	}
 }
