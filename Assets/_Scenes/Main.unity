@@ -416,16 +416,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3823299223577505537, guid: d4c37cba34a1abd46ad5a83d9dc78774,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823299223577505538, guid: d4c37cba34a1abd46ad5a83d9dc78774,
-        type: 3}
-      propertyPath: movementSpeed
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 3823299223577505548, guid: d4c37cba34a1abd46ad5a83d9dc78774,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -434,7 +424,7 @@ PrefabInstance:
     - target: {fileID: 3823299223577505548, guid: d4c37cba34a1abd46ad5a83d9dc78774,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3823299223577505548, guid: d4c37cba34a1abd46ad5a83d9dc78774,
         type: 3}
@@ -481,21 +471,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3823299225035474459, guid: d4c37cba34a1abd46ad5a83d9dc78774,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6717592137948332982, guid: d4c37cba34a1abd46ad5a83d9dc78774,
         type: 3}
       propertyPath: hitPlane
       value: 
       objectReference: {fileID: 732145024}
-    - target: {fileID: 6717592137948332982, guid: d4c37cba34a1abd46ad5a83d9dc78774,
-        type: 3}
-      propertyPath: presentSpeed
-      value: 60
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4c37cba34a1abd46ad5a83d9dc78774, type: 3}
 --- !u!1001 &4381328670074198165
