@@ -274,7 +274,7 @@ MonoBehaviour:
 
     Code Jasi - Music
 
-    Watusi - UI/3d Art
+    Law Watusi - UI/3d Art
 
     Bo (Intradom) Zhand - Unity Programming
 
@@ -351,10 +351,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1678537485}
-    characterCount: 180
+    characterCount: 184
     spriteCount: 0
-    spaceCount: 28
-    wordCount: 29
+    spaceCount: 29
+    wordCount: 30
     linkCount: 0
     lineCount: 6
     pageCount: 1
