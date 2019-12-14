@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BuildingChunk : MonoBehaviour
 {
+	[SerializeField] private DifficultyLadderName difficulty;
+
+	public DifficultyLadderName Difficulty => difficulty;
+
 	private void Update()
 	{
 		Vector3 currentPosition = transform.position;
