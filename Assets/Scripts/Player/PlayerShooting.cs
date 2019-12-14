@@ -22,17 +22,17 @@ public class PlayerShooting : MonoBehaviour
             Plane plane = new Plane(Vector3.up, Vector3.zero);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray.origin, ray.direction, Mathf.Infinity, layer_mask).OrderBy(h => h.distance).ToArray();
-            // Debug.Log("hits:" + hits.Length);
+            Debug.Log("hits:" + hits.Length);
             for (int i = 0; i < hits.Length; i++)
             {
                 RaycastHit hit = hits[i];
-                if (hit.collider.gameObject == hitPlane)
-                {
-                    Vector3 finalClickPos = hit.point;
-                    // Debug.Log("finalClickPos " + finalClickPos);
-                    GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
-                    present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
-                }
+                //if (hit.collider.gameObject == hitPlane)
+                //{
+                Vector3 finalClickPos = hit.point;
+                // Debug.Log("finalClickPos " + finalClickPos);
+                GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
+                present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
+                //}
             }
         }
     }
