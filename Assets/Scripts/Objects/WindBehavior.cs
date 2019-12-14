@@ -10,8 +10,6 @@ public class WindBehavior : MonoBehaviour
 	[SerializeField] private float minChangeTimeSeconds = 10f;
 	[SerializeField] private float maxChangeTimeSeconds = 30f;
 
-	[SerializeField] private GameObject refGM;
-
 	private Vector3 wind_vel;
 	private float lastChangeTime;
 	private float randomChangeWait;
@@ -22,6 +20,11 @@ public class WindBehavior : MonoBehaviour
 			return wind_vel;
 
 		return Vector3.zero; // no wind
+	}
+
+	private void Awake()
+	{
+		Game.Instance.OnStartGame += NewWind;
 	}
 
 	private void NewWind()
@@ -44,16 +47,16 @@ public class WindBehavior : MonoBehaviour
 		}
 	}
 
-	private void Start()
-	{
-		NewWind();
-	}
-
 	private void Update()
 	{
 		if ((Time.time - lastChangeTime) > randomChangeWait)
 		{
 			NewWind();
 		}
+	}
+
+	private void OnDestroy()
+	{
+		Game.Instance.OnStartGame -= NewWind;
 	}
 }
