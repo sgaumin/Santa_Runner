@@ -6,8 +6,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	[SerializeField] private float movementSpeed = 100f;
+    [SerializeField] private string collisionTag = "Building";
 
-	private Vector3 movement;
+    private Vector3 movement;
 	private Rigidbody body;
 
 	protected void Start()
@@ -22,4 +23,13 @@ public class PlayerMovement : MonoBehaviour
 
 		body.AddForce(movement * movementSpeed * Time.deltaTime);
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == collisionTag)
+        {
+            // TODO: Call Game Over function
+            Debug.Log("Player collided with a building");
+        }
+    }
 }
