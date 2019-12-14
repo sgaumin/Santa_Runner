@@ -35,7 +35,7 @@ public class Game : GameSystem
 
 	protected void Update()
 	{
-
+        base.Update();
 	}
 
     public void playerReset()
