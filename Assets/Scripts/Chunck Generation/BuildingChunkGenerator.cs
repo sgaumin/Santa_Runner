@@ -25,10 +25,10 @@ public class BuildingChunkGenerator : MonoBehaviour
 
 	public float ChunckMovementSpeed { get; private set; }
 
-	protected void Awake() => Instance = this;
-
-	private void Start()
+	protected void Awake()
 	{
+		Instance = this;
+
 		Game.Instance.OnStartGame += Init;
 		Game.Instance.OnStartGame += SpawnChunk;
 

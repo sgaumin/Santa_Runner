@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startChunckMovementSpeed: 0.05
-  durationBeforeStoping: 1
+  durationBeforeStoping: 3
   spawner: {fileID: 285265430104525746}
   chuncks:
   - {fileID: 7928747329475506690, guid: 9ac43bc10e7b9384ea071590a67b4390, type: 3}
@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8795316595068715510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5646062851163698744}

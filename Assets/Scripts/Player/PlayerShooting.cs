@@ -9,9 +9,11 @@ public class PlayerShooting : MonoBehaviour
 	[SerializeField] private float shootCDSeconds = 0.5f;
 
 	[SerializeField] private GameObject presentPrefab;
-	[SerializeField] private GameObject refGM;
-	[SerializeField] private GameObject refWind;
 	[SerializeField] private GameObject hitPlane;
+
+	[Header("ScreenShake Parameters")]
+	[SerializeField, Range(0f, 1f)] private float amplitude = 0.1f;
+	[SerializeField, Range(0f, 1f)] private float duration = 0.2f;
 
 	private float last_shot_time;
 
@@ -40,13 +42,13 @@ public class PlayerShooting : MonoBehaviour
 					{
 						Vector3 finalClickPos = hit.point;
 						// Debug.Log("finalClickPos " + finalClickPos);
-						GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
-						present.GetComponent<PresentBehavior>().SetGMRef(refGM);
-						present.GetComponent<PresentBehavior>().SetWindRef(refWind);
+						GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos), transform);
 						present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
 						last_shot_time = Time.time;
 					}
 				}
+
+				ScreenShake.Instance.Shake(amplitude, duration);
 			}
 		}
 	}
