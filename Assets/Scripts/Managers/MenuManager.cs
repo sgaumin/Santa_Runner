@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject buildingGenerator;
 
     [SerializeField] public bool movementEnabled { get; set; }
@@ -95,6 +96,12 @@ public class MenuManager : MonoBehaviour
 
     void togglePlaySceen(bool state)
     {
+        gameUI.SetActive(state);
         movementEnabled = state;
+    }
+
+    public void updateScore(int score)
+    {
+        gameUI.GetComponent<GUIManager>().updateScore(score);
     }
 }
