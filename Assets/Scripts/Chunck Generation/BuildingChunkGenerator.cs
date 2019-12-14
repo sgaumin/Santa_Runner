@@ -9,15 +9,18 @@ public class BuildingChunkGenerator : MonoBehaviour
 	[Header("Parameters")]
 	[SerializeField] private float chunckMovementSpeed = 1f;
 
-	[Header("References")]
-	[SerializeField] private Transform spawner;
+    [Header("References")]
+    [SerializeField] private Transform spawner;
 	[SerializeField] private BuildingChunk[] chuncks;
 
 	public float ChunckMovementSpeed => chunckMovementSpeed;
 
-	protected void Awake() => Instance = this;
+    protected void Awake() => Instance = this;
 
 	private void Start() => SpawnChunk();
 
-	public void SpawnChunk() => Instantiate(chuncks[Random.Range(0, chuncks.Length)], spawner);
+    public void SpawnChunk()
+    {
+        BuildingChunk newChunk = Instantiate(chuncks[Random.Range(0, chuncks.Length)], spawner);
+    }
 }

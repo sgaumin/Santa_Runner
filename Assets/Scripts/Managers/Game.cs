@@ -14,7 +14,7 @@ public class Game : GameSystem
 {
 	public static Game Instance { get; private set; }
 
-	public GameStates GameState { get; private set; } = GameStates.Play;
+	public GameStates GameState { get; set; } = GameStates.MainMenu;
 
 	protected override void Awake()
 	{
@@ -22,8 +22,8 @@ public class Game : GameSystem
 		Instance = this;
 	}
 
-	protected override void Update()
+	protected void Update()
 	{
-		base.Update();
+
 	}
 }

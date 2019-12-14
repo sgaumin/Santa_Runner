@@ -63,6 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 200
+  screenBoundaryBuffer: 20
   collisionTag: Building
 --- !u!114 &6717592137948332982
 MonoBehaviour:

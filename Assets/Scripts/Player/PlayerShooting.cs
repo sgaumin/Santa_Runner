@@ -23,14 +23,17 @@ public class PlayerShooting : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray.origin, ray.direction, Mathf.Infinity, layer_mask).OrderBy(h => h.distance).ToArray();
             Debug.Log("hits:" + hits.Length);
-            //for (int i = 0; i < hits.Length; i++) - Old code
-            if (hits.Length > 0) // Should never need to shoot more than one present
+            // Debug.Log("hits:" + hits.Length);
+            for (int i = 0; i < hits.Length; i++)
             {
-                RaycastHit hit = hits[0]; //hits[i]; - Old code
-                Vector3 finalClickPos = hit.point;
-                // Debug.Log("finalClickPos " + finalClickPos);
-                GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
-                present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
+                RaycastHit hit = hits[i];
+                if (hit.collider.gameObject == hitPlane)
+                {
+                    Vector3 finalClickPos = hit.point;
+                    // Debug.Log("finalClickPos " + finalClickPos);
+                    GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
+                    present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
+                }
             }
         }
     }
