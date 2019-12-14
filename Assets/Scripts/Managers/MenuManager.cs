@@ -86,14 +86,4 @@ public class MenuManager : MonoBehaviour
 		gameUI.SetActive(state);
 		movementEnabled = state;
 	}
-
-	public void updateScore(int score)
-	{
-		gameUI.GetComponent<GUIManager>().updateScore(score);
-	}
-
-	public void updateWindGUI(Vector3 wind_vel)
-	{
-		gameUI.GetComponent<GUIManager>().updateWindGUI(wind_vel);
-	}
 }

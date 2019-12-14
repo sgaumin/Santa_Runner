@@ -36,11 +36,11 @@ public class WindBehavior : MonoBehaviour
 		// Update GUI
 		if (enable_wind)
 		{
-			MenuManager.Instance.updateWindGUI(wind_vel);
+			GUIManager.Instance?.updateWindGUI(wind_vel);
 		}
 		else
 		{
-			MenuManager.Instance.updateWindGUI(Vector3.zero);
+			GUIManager.Instance?.updateWindGUI(Vector3.zero);
 		}
 	}
 

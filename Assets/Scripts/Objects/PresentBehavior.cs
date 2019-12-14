@@ -46,7 +46,7 @@ public class PresentBehavior : MonoBehaviour
 		//Debug.Log(collision.gameObject.tag);
 		if (collision.gameObject.tag == scoreColliderTag && refGM != null)
 		{
-			MenuManager.Instance.updateScore(points_increment);
+			GUIManager.Instance?.UpdateScore(points_increment);
 			Destroy(this.gameObject);
 		}
 	}
