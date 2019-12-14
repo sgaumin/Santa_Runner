@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartMenuManager : MonoBehaviour
+public class StartMenuManager : GameSystem
 {
 	private void Start() => FadScreen.Instance.FadIn(Color.black);
 
@@ -12,5 +12,10 @@ public class StartMenuManager : MonoBehaviour
 	{
 		yield return FadScreen.Instance.FadOutCore(Color.black);
 		LevelLoader.LoadNextLevel();
+	}
+
+	protected override void Update()
+	{
+		base.Update();
 	}
 }
