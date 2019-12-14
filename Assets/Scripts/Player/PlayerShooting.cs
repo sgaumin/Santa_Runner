@@ -7,13 +7,15 @@ public class PlayerShooting : MonoBehaviour
 {
 	[SerializeField] private float presentSpeed = 60;
 	[SerializeField] private float shootCDSeconds = 0.5f;
-
-	[SerializeField] private GameObject presentPrefab;
-	[SerializeField] private GameObject hitPlane;
+	[MinMaxSlider(10f, 1000f), SerializeField] private MinMax torqueForceAmount = new MinMax(200, 800f);
 
 	[Header("ScreenShake Parameters")]
 	[SerializeField, Range(0f, 1f)] private float amplitude = 0.1f;
 	[SerializeField, Range(0f, 1f)] private float duration = 0.2f;
+
+	[Header("References")]
+	[SerializeField] private GameObject presentPrefab;
+	[SerializeField] private GameObject hitPlane;
 
 	private float last_shot_time;
 
@@ -44,6 +46,9 @@ public class PlayerShooting : MonoBehaviour
 						// Debug.Log("finalClickPos " + finalClickPos);
 						GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos), transform);
 						present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
+
+						Vector3 torqueForce = new Vector3(Random.value, Random.value, Random.value) * torqueForceAmount.RandomValue;
+						present.GetComponent<Rigidbody>().AddTorque(torqueForce);
 						last_shot_time = Time.time;
 					}
 				}
