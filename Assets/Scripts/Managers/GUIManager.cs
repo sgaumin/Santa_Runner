@@ -11,6 +11,7 @@ public class GUIManager : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI scoreTextFiled;
 	[SerializeField] private GameObject windIndicatorRef;
 	[SerializeField] private string defaultScorePrefix = "Score: ";
+	[SerializeField] private Color highScoreColor = Color.yellow;
 
 	protected void Awake() => Instance = this;
 
@@ -22,6 +23,11 @@ public class GUIManager : MonoBehaviour
 	{
 		Score += s;
 		scoreTextFiled.text = defaultScorePrefix + Score;
+
+		if (Score > GameData.HighScore)
+		{
+			scoreTextFiled.color = highScoreColor;
+		}
 	}
 
 	internal void updateWindGUI(Vector3 wind_vel)
