@@ -105,4 +105,9 @@ public class MenuManager : MonoBehaviour
     {
         gameUI.GetComponent<GUIManager>().updateScore(score);
     }
+
+    public void updateWindGUI(Vector3 wind_vel)
+    {
+        gameUI.GetComponent<GUIManager>().updateWindGUI(wind_vel);
+    }
 }

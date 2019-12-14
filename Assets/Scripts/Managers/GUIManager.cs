@@ -7,7 +7,9 @@ using UnityEngine;
 public class GUIManager : MonoBehaviour
 {
     [SerializeField] private GameObject scoreTextFiled;
+    [SerializeField] private GameObject windIndicatorRef;
     [SerializeField] private String defaultScorePrefix = "Score: ";
+
 
     private int score = 0;
 
@@ -15,5 +17,21 @@ public class GUIManager : MonoBehaviour
     {
         score += s;
         scoreTextFiled.GetComponent<TextMeshProUGUI>().text = defaultScorePrefix + score;
+    }
+
+    internal void updateWindGUI(Vector3 wind_vel)
+    {
+        //Debug.Log(wind_vel);
+        if (wind_vel == Vector3.zero) // Wind is disabled
+        {
+            windIndicatorRef.SetActive(false);
+        }
+
+        // Enabled wind, alter GUI arrow to match wind velocity
+        float angle = Mathf.Atan2(wind_vel.z, wind_vel.x) * Mathf.Rad2Deg;
+        //Debug.Log("Angle: " + angle);
+        //Debug.Log("Mag: " + wind_vel.magnitude);
+        windIndicatorRef.GetComponent<RectTransform>().localScale = new Vector3(wind_vel.magnitude, wind_vel.magnitude, 1);
+        windIndicatorRef.GetComponent<RectTransform>().localRotation = Quaternion.Euler(0, 0, angle);
     }
 }

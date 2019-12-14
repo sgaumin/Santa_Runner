@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour
 
     [SerializeField] private GameObject presentPrefab;
     [SerializeField] private GameObject refGM;
+    [SerializeField] private GameObject refWind;
     [SerializeField] private GameObject hitPlane;
 
     private float last_shot_time;
@@ -37,7 +38,8 @@ public class PlayerShooting : MonoBehaviour
                     Vector3 finalClickPos = hit.point;
                     // Debug.Log("finalClickPos " + finalClickPos);
                     GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
-                    present.GetComponent<Present_Behavior>().SetGM(refGM);
+                    present.GetComponent<PresentBehavior>().SetGMRef(refGM);
+                    present.GetComponent<PresentBehavior>().SetWindRef(refWind);
                     present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
                     last_shot_time = Time.time;
                 }
