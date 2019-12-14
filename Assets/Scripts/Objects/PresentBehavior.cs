@@ -7,6 +7,7 @@ public class PresentBehavior : MonoBehaviour
 	[SerializeField] private int points_increment = 1;
 	[SerializeField] private int wind_scale = 50;
 	[SerializeField] private string scoreColliderTag = "Chimney";
+	[SerializeField] private ParticleSystem hitEffect;
 
 	private Rigidbody body;
 
@@ -25,6 +26,7 @@ public class PresentBehavior : MonoBehaviour
 		if (collision.gameObject.tag == scoreColliderTag)
 		{
 			GUIManager.Instance?.UpdateScore(points_increment);
+			Instantiate(hitEffect, transform.position, Quaternion.identity, collision.transform);
 			Destroy(this.gameObject);
 		}
 	}
