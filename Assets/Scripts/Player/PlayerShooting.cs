@@ -5,45 +5,49 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    [SerializeField] private float presentSpeed = 60;    
-    [SerializeField] private float shootCDSeconds = 0.5f;
+	[SerializeField] private float presentSpeed = 60;
+	[SerializeField] private float shootCDSeconds = 0.5f;
 
-    [SerializeField] private GameObject presentPrefab;
-    [SerializeField] private GameObject refGM;
-    [SerializeField] private GameObject refWind;
-    [SerializeField] private GameObject hitPlane;
+	[SerializeField] private GameObject presentPrefab;
+	[SerializeField] private GameObject refGM;
+	[SerializeField] private GameObject refWind;
+	[SerializeField] private GameObject hitPlane;
 
-    private float last_shot_time;
+	private float last_shot_time;
 
-    int layer_mask;
+	int layer_mask;
 
-    void Start()
-    {
-       layer_mask = LayerMask.GetMask("HitPlane");
-        last_shot_time = Time.time;
-    }
-    void Update()
-    {
-        if (Input.GetButtonDown("Fire1") && (Time.time - last_shot_time) > shootCDSeconds) {
-            Plane plane = new Plane(Vector3.up, Vector3.zero);
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit[] hits = Physics.RaycastAll(ray.origin, ray.direction, Mathf.Infinity, layer_mask).OrderBy(h => h.distance).ToArray();
-            //Debug.Log("hits:" + hits.Length);
-            // Debug.Log("hits:" + hits.Length);
-            for (int i = 0; i < hits.Length; i++)
-            {
-                RaycastHit hit = hits[i];
-                if (hit.collider.gameObject == hitPlane)
-                {
-                    Vector3 finalClickPos = hit.point;
-                    // Debug.Log("finalClickPos " + finalClickPos);
-                    GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
-                    present.GetComponent<PresentBehavior>().SetGMRef(refGM);
-                    present.GetComponent<PresentBehavior>().SetWindRef(refWind);
-                    present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
-                    last_shot_time = Time.time;
-                }
-            }
-        }
-    }
+	void Start()
+	{
+		layer_mask = LayerMask.GetMask("HitPlane");
+		last_shot_time = Time.time;
+	}
+	void Update()
+	{
+		if (Game.Instance.GameState == Game.GameStates.Play)
+		{
+			if (Input.GetButtonDown("Fire1") && (Time.time - last_shot_time) > shootCDSeconds)
+			{
+				Plane plane = new Plane(Vector3.up, Vector3.zero);
+				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+				RaycastHit[] hits = Physics.RaycastAll(ray.origin, ray.direction, Mathf.Infinity, layer_mask).OrderBy(h => h.distance).ToArray();
+				//Debug.Log("hits:" + hits.Length);
+				// Debug.Log("hits:" + hits.Length);
+				for (int i = 0; i < hits.Length; i++)
+				{
+					RaycastHit hit = hits[i];
+					if (hit.collider.gameObject == hitPlane)
+					{
+						Vector3 finalClickPos = hit.point;
+						// Debug.Log("finalClickPos " + finalClickPos);
+						GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
+						present.GetComponent<PresentBehavior>().SetGMRef(refGM);
+						present.GetComponent<PresentBehavior>().SetWindRef(refWind);
+						present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
+						last_shot_time = Time.time;
+					}
+				}
+			}
+		}
+	}
 }
