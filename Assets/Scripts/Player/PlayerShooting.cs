@@ -5,20 +5,25 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    [SerializeField] private float presentSpeed = 60;    
+    [SerializeField] private float shootCDSeconds = 0.5f;
 
     [SerializeField] private GameObject presentPrefab;
+    [SerializeField] private GameObject refGM;
     [SerializeField] private GameObject hitPlane;
-    [SerializeField] private float presentSpeed;
+
+    private float last_shot_time;
 
     int layer_mask;
 
     void Start()
     {
        layer_mask = LayerMask.GetMask("HitPlane");
+        last_shot_time = Time.time;
     }
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire1") && (Time.time - last_shot_time) > shootCDSeconds) {
             Plane plane = new Plane(Vector3.up, Vector3.zero);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray.origin, ray.direction, Mathf.Infinity, layer_mask).OrderBy(h => h.distance).ToArray();
@@ -32,7 +37,9 @@ public class PlayerShooting : MonoBehaviour
                     Vector3 finalClickPos = hit.point;
                     // Debug.Log("finalClickPos " + finalClickPos);
                     GameObject present = Instantiate(presentPrefab, transform.position, Quaternion.LookRotation(finalClickPos));
+                    present.GetComponent<Present_Behavior>().SetGM(refGM);
                     present.GetComponent<Rigidbody>().AddForce((finalClickPos - present.transform.position) * presentSpeed);
+                    last_shot_time = Time.time;
                 }
             }
         }

@@ -8,6 +8,7 @@ TagManager:
   - Building
   - Present
   - Play
+  - Chimney
   layers:
   - Default
   - TransparentFX

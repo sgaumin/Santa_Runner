@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	[SerializeField] private float movementSpeed = 100f;
     [SerializeField] private float screenBoundaryBuffer = 20f; // Adjust how far off screen player can go
-    [SerializeField] private string collisionTag = "Building";
+    [SerializeField] private string deathColliderTag = "Building";
     [SerializeField] private GameObject refGM;
 
     private Vector3 movement;
@@ -56,9 +56,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == collisionTag)
+        if (collision.gameObject.tag == deathColliderTag)
         {
-            Debug.Log("Player collided with a building");
+            //Debug.Log("Player collided with a building");
             refGM.GetComponent<MenuManager>().toState(Game.GameStates.GameOver);
         }
     }

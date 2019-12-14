@@ -393,6 +393,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7246981277467468507, guid: 91f77c7f45a95cc40a928615b549a427,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1455377220}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f77c7f45a95cc40a928615b549a427, type: 3}
 --- !u!114 &473461654 stripped
@@ -587,6 +592,16 @@ PrefabInstance:
       propertyPath: hitPlane
       value: 
       objectReference: {fileID: 540028513}
+    - target: {fileID: 6717592137948332982, guid: d4c37cba34a1abd46ad5a83d9dc78774,
+        type: 3}
+      propertyPath: refGM
+      value: 
+      objectReference: {fileID: 727432299}
+    - target: {fileID: 6717592137948332982, guid: d4c37cba34a1abd46ad5a83d9dc78774,
+        type: 3}
+      propertyPath: shootCDSeconds
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4c37cba34a1abd46ad5a83d9dc78774, type: 3}
 --- !u!1 &727432299 stripped
@@ -686,6 +701,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 46.727, y: -19.388, z: -13.221001}
+--- !u!1 &1455377220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3823299223577505537, guid: d4c37cba34a1abd46ad5a83d9dc78774,
+    type: 3}
+  m_PrefabInstance: {fileID: 635286290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1971263667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -712,6 +733,10 @@ PrefabInstance:
     - target: {fileID: 1678537485, guid: 5279ffa63bcb8ce4f890d8a71da9eeeb, type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678537485, guid: 5279ffa63bcb8ce4f890d8a71da9eeeb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 546920983019223376, guid: 5279ffa63bcb8ce4f890d8a71da9eeeb,
         type: 3}
