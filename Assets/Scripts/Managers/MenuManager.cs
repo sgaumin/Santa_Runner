@@ -34,21 +34,21 @@ public class MenuManager : MonoBehaviour
         //}
     }
 
-    public void updateByGameState(GameStates gameState){
+    public void updateByGameState(Game.GameStates gameState){
         disableAll();
         switch (gameState)
         {
-            case GameStates.GameOver:
+            case Game.GameStates.GameOver:
                 toggleGameOverMenu(true);
                 break;
-            case GameStates.Play:
+            case Game.GameStates.Play:
                 togglePlaySceen(true);
                 break;
-            case GameStates.Pause:
+            case Game.GameStates.Pause:
                 Time.timeScale = 0;
                 togglePauseMenu(true);
                 break;
-            case GameStates.MainMenu:
+            case Game.GameStates.MainMenu:
             default:
                 toggleMainMenu(true);
                 break;
@@ -56,11 +56,11 @@ public class MenuManager : MonoBehaviour
     }
 
     public void toState(string state) {
-        this.GetComponent<Game>().GameState = (GameStates)System.Enum.Parse(typeof(GameStates), state);
+        this.GetComponent<Game>().GameState = (Game.GameStates)System.Enum.Parse(typeof(Game.GameStates), state);
         updateByGameState();
     }
 
-    public void toState(GameStates state)
+    public void toState(Game.GameStates state)
     {
         this.GetComponent<Game>().GameState = state;
         updateByGameState();
