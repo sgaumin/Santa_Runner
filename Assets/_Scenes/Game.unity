@@ -552,6 +552,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 827454156}
+    - target: {fileID: 8350653562463260593, guid: 5279ffa63bcb8ce4f890d8a71da9eeeb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 827454156}
+    - target: {fileID: 8350653562463260593, guid: 5279ffa63bcb8ce4f890d8a71da9eeeb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5279ffa63bcb8ce4f890d8a71da9eeeb, type: 3}
 --- !u!1 &827454155 stripped

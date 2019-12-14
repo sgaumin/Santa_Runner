@@ -1,4 +1,4 @@
-﻿using DG.Tweening;
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -79,4 +79,6 @@ public class Game : GameSystem
 	}
 
 	public void PlayAgain() => LevelLoader.ReloadLevel();
+
+	public void LoadMenu() => LevelLoader.LoadLevelByIndex(0);
 }
