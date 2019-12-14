@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WindBehavior : MonoBehaviour
 {
+	public static WindBehavior Instance { get; private set; }
+
 	[SerializeField] private bool enable_wind = false;
 	[SerializeField] private float minMagnitude = 0f;
 	[SerializeField] private float maxMagnitude = 5f;
@@ -14,17 +16,19 @@ public class WindBehavior : MonoBehaviour
 	private float lastChangeTime;
 	private float randomChangeWait;
 
+	private void Awake()
+	{
+		Instance = this;
+
+		Game.Instance.OnStartGame += NewWind;
+	}
+
 	public Vector3 GetWindVel()
 	{
 		if (enable_wind)
 			return wind_vel;
 
 		return Vector3.zero; // no wind
-	}
-
-	private void Awake()
-	{
-		Game.Instance.OnStartGame += NewWind;
 	}
 
 	private void NewWind()
