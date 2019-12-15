@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -4847467272612000990}
   - component: {fileID: 6916312336427132608}
   - component: {fileID: 7212204164351176398}
+  - component: {fileID: -6351450773402830282}
   m_Layer: 15
   m_Name: Child
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738734057383590425}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.030633, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7279816261226784611}
@@ -142,11 +143,27 @@ CapsuleCollider:
   m_GameObject: {fileID: 1738734057383590425}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.6546001
   m_Height: 2.317345
   m_Direction: 2
   m_Center: {x: 0.0015239716, y: 0.0030093193, z: 1.1671711}
+--- !u!54 &-6351450773402830282
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738734057383590425}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
 --- !u!1001 &2341219380451429497
 PrefabInstance:
   m_ObjectHideFlags: 0
