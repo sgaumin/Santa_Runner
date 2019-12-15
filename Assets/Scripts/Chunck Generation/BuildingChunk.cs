@@ -20,6 +20,9 @@ public class BuildingChunk : MonoBehaviour
             Vector3 nextPosition = new Vector3(currentPosition.x, currentPosition.y, currentPosition.z - BuildingChunkGenerator.Instance.ChunckMovementSpeed);
             transform.position = nextPosition;
         }
+
+        // Move NavMesh with self
+        navMesh.position = this.transform.position;
 	}
 
     private void Awake()
