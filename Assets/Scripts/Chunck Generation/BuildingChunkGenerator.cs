@@ -60,16 +60,19 @@ public class BuildingChunkGenerator : MonoBehaviour
 	{
 		if (state == GeneratorState.Activated)
 		{
-			if (nbLoop >= difficultyLadder[currentDifficultyLevel].loopCount &&
-				CurrentDifficultyLadder != difficultyLadder[currentDifficultyLevel].name)
+			if (currentDifficultyLevel <= difficultyLadder.Length)
 			{
-				CurrentDifficultyLadder = difficultyLadder[currentDifficultyLevel].name;
-				currentDifficultyLevel++;
-
-				BuildingChunk[] currentLevelPool = chuncks.Where(x => x.Difficulty == CurrentDifficultyLadder).ToArray();
-				foreach (BuildingChunk building in currentLevelPool)
+				if (nbLoop >= difficultyLadder[currentDifficultyLevel].loopCount &&
+					CurrentDifficultyLadder != difficultyLadder[currentDifficultyLevel].name)
 				{
-					currentPool.Add(building);
+					CurrentDifficultyLadder = difficultyLadder[currentDifficultyLevel].name;
+					currentDifficultyLevel++;
+
+					BuildingChunk[] currentLevelPool = chuncks.Where(x => x.Difficulty == CurrentDifficultyLadder).ToArray();
+					foreach (BuildingChunk building in currentLevelPool)
+					{
+						currentPool.Add(building);
+					}
 				}
 			}
 
