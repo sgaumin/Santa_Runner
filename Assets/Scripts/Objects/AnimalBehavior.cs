@@ -42,7 +42,7 @@ public class AnimalBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(this.transform.position);
+        //Debug.Log(this.transform.position);
         // Do this every so often, allows for mid-path changes and stalling at a location
         if ((Time.time - lastChangeTime) > randomChangeWait)
         {
