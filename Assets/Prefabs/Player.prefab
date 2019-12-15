@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 3823299223577505539}
   - component: {fileID: 3823299223577505538}
   - component: {fileID: 6717592137948332982}
+  - component: {fileID: -5711631702404005130}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -115,12 +116,43 @@ MonoBehaviour:
     isStayedWhenLoaddingScene: 0
     autoDestroy: 0
     multiplier: 5
-    mixerGroup: {fileID: 0}
+    mixerGroup: {fileID: -6744835731171102293, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
   amplitude: 0.1
   duration: 0.182
   presentPrefab: {fileID: 4837639544857117662, guid: 1390b9be39d8e0e44806324399278fea,
     type: 3}
   hitPlane: {fileID: 0}
+--- !u!114 &-5711631702404005130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823299223577505537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ff02d14883e8247bd3b66e150af00c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceSound:
+    isUsingClips: 1
+    clip: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: fc793dca6bc244c4bb9d178b2c9a9498, type: 3}
+    - {fileID: 8300000, guid: 7e4ac985de883bc468b225cc78d4aa41, type: 3}
+    attached: 1
+    loop: 0
+    isPitchModified: 1
+    pitchMaxVariation: 0.3
+    isStayedWhenLoaddingScene: 0
+    autoDestroy: 0
+    multiplier: 5
+    mixerGroup: {fileID: -2460851675102507207, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+  breakDuration:
+    min: 6
+    max: 12
 --- !u!1 &5028190854454963683
 GameObject:
   m_ObjectHideFlags: 0
