@@ -9,7 +9,10 @@ public class PlayerShooting : MonoBehaviour
 	[SerializeField] private float shootCDSeconds = 0.5f;
 	[MinMaxSlider(10f, 1000f), SerializeField] private MinMax torqueForceAmount = new MinMax(200, 800f);
 
-	[Header("ScreenShake Parameters")]
+    [SerializeField] private AudioExpress audioExpress;
+
+
+    [Header("ScreenShake Parameters")]
 	[SerializeField, Range(0f, 1f)] private float amplitude = 0.1f;
 	[SerializeField, Range(0f, 1f)] private float duration = 0.2f;
 
@@ -23,7 +26,7 @@ public class PlayerShooting : MonoBehaviour
 
 	void Start()
 	{
-		layer_mask = LayerMask.GetMask("HitPlane");
+        layer_mask = LayerMask.GetMask("HitPlane");
 		last_shot_time = Time.time;
 	}
 	void Update()
@@ -50,7 +53,9 @@ public class PlayerShooting : MonoBehaviour
 						Vector3 torqueForce = new Vector3(Random.value, Random.value, Random.value) * torqueForceAmount.RandomValue;
 						present.GetComponent<Rigidbody>().AddTorque(torqueForce);
 						last_shot_time = Time.time;
-					}
+                        audioExpress.Play(gameObject);
+
+                    }
 				}
 
 				ScreenShake.Instance.Shake(amplitude, duration);

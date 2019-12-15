@@ -104,6 +104,18 @@ MonoBehaviour:
   torqueForceAmount:
     min: 200
     max: 800
+  audioExpress:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: 8b0b68221e5c86148aa88a10e8fb07b5, type: 3}
+    clips: []
+    attached: 0
+    loop: 0
+    isPitchModified: 0
+    pitchMaxVariation: 0.3
+    isStayedWhenLoaddingScene: 0
+    autoDestroy: 0
+    multiplier: 5
+    mixerGroup: {fileID: 0}
   amplitude: 0.1
   duration: 0.182
   presentPrefab: {fileID: 4837639544857117662, guid: 1390b9be39d8e0e44806324399278fea,
