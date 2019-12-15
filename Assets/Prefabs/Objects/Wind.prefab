@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7674af620a0c21c4f810e0c299ef1a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enable_wind: 1
+  enable_wind: 0
   minMagnitude: 0
   maxMagnitude: 50
   minChangeTimeSeconds: 10

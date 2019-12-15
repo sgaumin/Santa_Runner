@@ -1,13 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BuildingChunk : MonoBehaviour
 {
+    [SerializeField] private bool enableMovement = true;
+    [SerializeField] private NavMeshData navMesh;
+
+    private NavMeshDataInstance navMeshInst;
+
     private void Update()
 	{
-        Vector3 currentPosition = transform.position;
-        Vector3 nextPosition = new Vector3(currentPosition.x, currentPosition.y, currentPosition.z - BuildingChunkGenerator.Instance.ChunckMovementSpeed);
-        transform.position = nextPosition;
+        if (enableMovement)
+        {
+            Vector3 currentPosition = transform.position;
+            Vector3 nextPosition = new Vector3(currentPosition.x, currentPosition.y, currentPosition.z - BuildingChunkGenerator.Instance.ChunckMovementSpeed);
+            transform.position = nextPosition;
+        }
 	}
+
+    private void Awake()
+    {
+        navMeshInst = NavMesh.AddNavMeshData(navMesh);
+    }
+
+    private void OnDestroy()
+    {
+        NavMesh.RemoveNavMeshData(navMeshInst);
+    }
 }

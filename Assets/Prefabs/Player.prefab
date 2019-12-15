@@ -85,7 +85,7 @@ MonoBehaviour:
     type: 3}
   hitPlane: {fileID: 0}
   amplitude: 0.1
-  duration: 0.2
+  duration: 0.182
 --- !u!1 &3823299225035474459
 GameObject:
   m_ObjectHideFlags: 0
