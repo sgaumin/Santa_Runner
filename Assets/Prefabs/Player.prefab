@@ -116,19 +116,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ff02d14883e8247bd3b66e150af00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceSound:
-    isUsingClips: 1
-    clip: {fileID: 0}
-    clips:
-    - {fileID: 8300000, guid: fc793dca6bc244c4bb9d178b2c9a9498, type: 3}
-    - {fileID: 8300000, guid: 7e4ac985de883bc468b225cc78d4aa41, type: 3}
+  voiceSounds:
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: fc793dca6bc244c4bb9d178b2c9a9498, type: 3}
+    clips: []
     attached: 1
     loop: 0
     isPitchModified: 1
-    pitchMaxVariation: 0.3
+    pitchMaxVariation: 0.2
     isStayedWhenLoaddingScene: 0
     autoDestroy: 0
-    multiplier: 5
+    multiplier: 0
+    mixerGroup: {fileID: -2460851675102507207, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: 7e4ac985de883bc468b225cc78d4aa41, type: 3}
+    clips: []
+    attached: 1
+    loop: 0
+    isPitchModified: 1
+    pitchMaxVariation: 0.2
+    isStayedWhenLoaddingScene: 0
+    autoDestroy: 0
+    multiplier: 0
     mixerGroup: {fileID: -2460851675102507207, guid: dbd143edd4df0224d92ac4ff39f0844e,
       type: 2}
   breakDuration:

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerVoice : MonoBehaviour
 {
-	[SerializeField] private AudioExpress voiceSound;
+	[SerializeField] private AudioExpress[] voiceSounds;
 	[MinMaxSlider(1f, 20f), SerializeField] private MinMax breakDuration = new MinMax(6f, 12f);
 
 	private Coroutine voiceSoundPlaying;
@@ -23,7 +23,7 @@ public class PlayerVoice : MonoBehaviour
 		while (true)
 		{
 			yield return new WaitForSeconds(breakDuration.RandomValue);
-			voiceSound.Play(gameObject);
+			voiceSounds[Random.Range(0, voiceSounds.Length)].Play(gameObject);
 		}
 	}
 
