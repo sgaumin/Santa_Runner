@@ -60,7 +60,7 @@ public class BuildingChunkGenerator : MonoBehaviour
 	{
 		if (state == GeneratorState.Activated)
 		{
-			if (currentDifficultyLevel <= difficultyLadder.Length)
+			if (currentDifficultyLevel < difficultyLadder.Length)
 			{
 				if (nbLoop >= difficultyLadder[currentDifficultyLevel].loopCount &&
 					CurrentDifficultyLadder != difficultyLadder[currentDifficultyLevel].name)
