@@ -132,6 +132,7 @@ MonoBehaviour:
     loopCount: 5
   - name: 3
     loopCount: 7
+  maxLoopSpeed: 5
   spawner: {fileID: 285265430104525746}
   chuncks:
   - {fileID: 7928747329475506690, guid: 9ac43bc10e7b9384ea071590a67b4390, type: 3}

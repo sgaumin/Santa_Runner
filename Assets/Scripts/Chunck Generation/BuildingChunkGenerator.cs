@@ -26,6 +26,7 @@ public class BuildingChunkGenerator : MonoBehaviour
 	[SerializeField] private float durationBeforeStoping = 1f;
 	[SerializeField] private float difficultyFactor = 0.04f;
 	[SerializeField] private DifficultyLadder[] difficultyLadder = new DifficultyLadder[3];
+	[SerializeField] private int maxLoopSpeed = 4;
 
 	[Header("References")]
 	[SerializeField] private Transform spawner;
@@ -78,7 +79,10 @@ public class BuildingChunkGenerator : MonoBehaviour
 
 			Instantiate(currentPool[Random.Range(0, currentPool.Count)], spawner);
 
-			ChunckMovementSpeed += Mathf.Log(++nbLoop, 2f) * difficultyFactor;
+			if (nbLoop < maxLoopSpeed)
+			{
+				ChunckMovementSpeed += Mathf.Log(++nbLoop, 2f) * difficultyFactor;
+			}
 		}
 	}
 
