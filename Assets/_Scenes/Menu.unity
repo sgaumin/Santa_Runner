@@ -850,6 +850,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5836294248305991984}
     m_Modifications:
+    - target: {fileID: 2989195906237285400, guid: 546e89ff2edefd945a908944aac8d88b,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 2989195906237285400, guid: 546e89ff2edefd945a908944aac8d88b,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 2989195906237285400, guid: 546e89ff2edefd945a908944aac8d88b,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989195906237285400, guid: 546e89ff2edefd945a908944aac8d88b,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 3381302177667921958, guid: 546e89ff2edefd945a908944aac8d88b,
         type: 3}
       propertyPath: m_Name
