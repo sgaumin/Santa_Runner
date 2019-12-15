@@ -106,5 +106,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useRandom: 0
-  unlimitedPresents: 0
+  unlimitedPresents: 1
   presentsCap: 2
