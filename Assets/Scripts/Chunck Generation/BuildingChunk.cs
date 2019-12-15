@@ -7,6 +7,7 @@ public class BuildingChunk : MonoBehaviour
 {
     [SerializeField] private bool enableMovement = true;
     [SerializeField] private NavMeshData navMesh;
+    [SerializeField] private NavMeshData navMesh_temp;
     [SerializeField] private DifficultyLadderName difficulty;
     public DifficultyLadderName Difficulty => difficulty;
 
@@ -22,12 +23,13 @@ public class BuildingChunk : MonoBehaviour
         }
 
         // Move NavMesh with self
-        navMesh.position = this.transform.position;
+        navMesh_temp.position = this.transform.position;
 	}
 
     private void Awake()
     {
-        navMeshInst = NavMesh.AddNavMeshData(navMesh);
+        navMesh_temp = navMesh;
+        navMeshInst = NavMesh.AddNavMeshData(navMesh_temp);
     }
 
     private void OnDestroy()
