@@ -14,6 +14,7 @@ public class PresentBehavior : MonoBehaviour
 	[SerializeField] private ParticleSystem hitEffect;
 	[SerializeField] private GameObject[] models;
 
+	private bool hasFirstImpact;
 	private Rigidbody body;
 
 	private void Awake() => body = GetComponent<Rigidbody>();
@@ -35,12 +36,18 @@ public class PresentBehavior : MonoBehaviour
 		//Debug.Log(collision.gameObject.tag);
 		if (collision.gameObject.tag == scoreColliderTag)
 		{
-            if (collision.gameObject.GetComponent<ChimneyBehavior>().AddPresent(1))
-            {
-                GUIManager.Instance?.UpdateScore(points_increment);
-                Instantiate(hitEffect, transform.position, Quaternion.identity, collision.transform);
-                Destroy(this.gameObject);
-            }
+			if (collision.gameObject.GetComponent<ChimneyBehavior>().AddPresent(1))
+			{
+				GUIManager.Instance?.UpdateScore(points_increment);
+				Instantiate(hitEffect, transform.position, Quaternion.identity, collision.transform);
+				Destroy(this.gameObject);
+			}
+		}
+
+		if (!hasFirstImpact)
+		{
+			hasFirstImpact = true;
+			transform.parent = collision.transform;
 		}
 	}
 }
