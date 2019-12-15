@@ -7,6 +7,8 @@ public class BuildingChunk : MonoBehaviour
 {
     [SerializeField] private bool enableMovement = true;
     [SerializeField] private NavMeshData navMesh;
+    [SerializeField] private DifficultyLadderName difficulty;
+    public DifficultyLadderName Difficulty => difficulty;
 
     private NavMeshDataInstance navMeshInst;
 

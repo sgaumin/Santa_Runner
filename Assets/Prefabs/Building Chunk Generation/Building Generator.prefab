@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2304602183278035559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -50}
+  m_LocalPosition: {x: 0, y: 0, z: -70}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5646062851163698744}
@@ -120,8 +120,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7857391b57ad19e4d9ae23c849f1d62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startChunckMovementSpeed: 0.05
+  startChunckMovementSpeed: 0.03
   durationBeforeStoping: 3
+  difficultyFactor: 0.015
+  difficultyLadder:
+  - name: 0
+    loopCount: 0
+  - name: 1
+    loopCount: 3
+  - name: 2
+    loopCount: 5
+  - name: 3
+    loopCount: 7
   spawner: {fileID: 285265430104525746}
   chuncks:
   - {fileID: 7928747329475506690, guid: 9ac43bc10e7b9384ea071590a67b4390, type: 3}
