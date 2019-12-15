@@ -4766,7 +4766,6 @@ GameObject:
   - component: {fileID: 1721975371064899473}
   - component: {fileID: 2288417632278860169}
   - component: {fileID: 3521570446292232184}
-  - component: {fileID: 7067590066748482136}
   m_Layer: 9
   m_Name: Present
   m_TagString: Present
@@ -4831,6 +4830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f09d6cbe5e2e024d9739ad39b6d957a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUsedAsDecoration: 0
   points_increment: 1
   wind_scale: 50
   scoreColliderTag: Chimney
@@ -4839,19 +4839,6 @@ MonoBehaviour:
   models:
   - {fileID: 8947824705324010566}
   - {fileID: 2967850365503840956}
---- !u!114 &7067590066748482136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4837639544857117662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3f210193ce84b348aa762aaa81b5314, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  durationBeforeDestroy: 5
 --- !u!1 &5606717263110457620
 GameObject:
   m_ObjectHideFlags: 0
