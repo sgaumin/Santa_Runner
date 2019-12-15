@@ -18,6 +18,8 @@ public class Game : GameSystem
 
 	public static Game Instance { get; private set; }
 
+	[SerializeField] private AudioExpress clickSound;
+
 	private GameStates gameState;
 
 	public GameStates GameState
@@ -66,6 +68,7 @@ public class Game : GameSystem
 
 	private IEnumerator PlayAgainCore()
 	{
+		clickSound.Play(gameObject);
 		yield return FadScreen.Instance.FadOutCore(Color.black);
 		LevelLoader.ReloadLevel();
 	}
@@ -74,6 +77,7 @@ public class Game : GameSystem
 
 	private IEnumerator LoadMenuCore()
 	{
+		clickSound.Play(gameObject);
 		yield return FadScreen.Instance.FadOutCore(Color.black);
 		LevelLoader.LoadLevelByIndex(0);
 	}

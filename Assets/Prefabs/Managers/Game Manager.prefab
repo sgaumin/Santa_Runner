@@ -43,5 +43,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04dc52d7a03854747abbc90cc4458624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStartingPos: {x: 0, y: 5, z: 0}
-  player: {fileID: 0}
+  clickSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: 3fa9493cf617ff94b8dcd589cce104aa, type: 3}
+    clips: []
+    attached: 1
+    loop: 0
+    isPitchModified: 1
+    pitchMaxVariation: 0.3
+    isStayedWhenLoaddingScene: 0
+    autoDestroy: 0
+    multiplier: 5
+    mixerGroup: {fileID: -7482101583291677135, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
