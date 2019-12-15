@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3823299223577505548}
   - component: {fileID: 3823299223577505539}
   - component: {fileID: 3823299223577505538}
-  - component: {fileID: 6717592137948332982}
   - component: {fileID: -5711631702404005130}
   m_Layer: 8
   m_Name: Player
@@ -35,6 +34,7 @@ Transform:
   - {fileID: 5559507548293110455}
   - {fileID: 388749803491819945}
   - {fileID: 741175096170851116}
+  - {fileID: 1393047010559552410}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -69,41 +69,6 @@ MonoBehaviour:
   movementSpeed: 10
   screenBoundaryBuffer: 20
   deathColliderTag: Building
---- !u!114 &6717592137948332982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3823299223577505537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff232fe7290f70445a7754ebdc6d6104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  presentSpeed: 60
-  shootCDSeconds: 0.25
-  torqueForceAmount:
-    min: 200
-    max: 800
-  audioExpress:
-    isUsingClips: 0
-    clip: {fileID: 8300000, guid: 8b0b68221e5c86148aa88a10e8fb07b5, type: 3}
-    clips: []
-    attached: 0
-    loop: 0
-    isPitchModified: 0
-    pitchMaxVariation: 0.3
-    isStayedWhenLoaddingScene: 0
-    autoDestroy: 0
-    multiplier: 5
-    mixerGroup: {fileID: -6744835731171102293, guid: dbd143edd4df0224d92ac4ff39f0844e,
-      type: 2}
-  amplitude: 0.1
-  duration: 0.182
-  presentPrefab: {fileID: 4837639544857117662, guid: 1390b9be39d8e0e44806324399278fea,
-    type: 3}
-  hitPlane: {fileID: 0}
 --- !u!114 &-5711631702404005130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +153,72 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1582468, y: 1.1582468, z: 1.8569872}
   m_Center: {x: 0, y: 0, z: 0.42849386}
+--- !u!1 &5862078864236663918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393047010559552410}
+  - component: {fileID: 536514885709536971}
+  m_Layer: 8
+  m_Name: ShootingLoc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1393047010559552410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862078864236663918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3823299223577505548}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &536514885709536971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862078864236663918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff232fe7290f70445a7754ebdc6d6104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  presentSpeed: 60
+  shootCDSeconds: 0.25
+  torqueForceAmount:
+    min: 200
+    max: 800
+  audioExpress:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: 8b0b68221e5c86148aa88a10e8fb07b5, type: 3}
+    clips: []
+    attached: 0
+    loop: 0
+    isPitchModified: 0
+    pitchMaxVariation: 0.3
+    isStayedWhenLoaddingScene: 0
+    autoDestroy: 0
+    multiplier: 5
+    mixerGroup: {fileID: -6744835731171102293, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+  amplitude: 0.1
+  duration: 0.182
+  presentPrefab: {fileID: 4837639544857117662, guid: 1390b9be39d8e0e44806324399278fea,
+    type: 3}
+  hitPlane: {fileID: 0}
 --- !u!1001 &1104258888824286804
 PrefabInstance:
   m_ObjectHideFlags: 0
