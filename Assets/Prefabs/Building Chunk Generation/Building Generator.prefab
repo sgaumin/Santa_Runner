@@ -136,6 +136,7 @@ MonoBehaviour:
   chuncks:
   - {fileID: 7928747329475506690, guid: 9ac43bc10e7b9384ea071590a67b4390, type: 3}
   - {fileID: 7928747329475506690, guid: 04ac80d9830d5fb4c9c55db8899f25d7, type: 3}
+  - {fileID: 7928747329475506690, guid: 0743375942a47c9439933378f1987f22, type: 3}
 --- !u!1 &7366975534989523133
 GameObject:
   m_ObjectHideFlags: 0
