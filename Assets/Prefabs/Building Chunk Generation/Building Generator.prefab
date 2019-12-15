@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7857391b57ad19e4d9ae23c849f1d62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startChunckMovementSpeed: 0.03
+  startChunckMovementSpeed: 0.05
   durationBeforeStoping: 3
   difficultyFactor: 0.015
   difficultyLadder:
