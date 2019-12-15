@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5827820479238189977}
   - component: {fileID: 8894735913906700284}
   - component: {fileID: 6453323889175475982}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: AnimalSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2682c167b4509a447b9b4940641e8e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  to_instantiate: {fileID: 4516613519342935510, guid: 27e3f22d43bed754e869571f83acd5c4,
+  to_instantiate: {fileID: 1738734057383590425, guid: 7e34e32d40c99cf4c9e0f182060ac1f5,
     type: 3}
 --- !u!33 &8894735913906700284
 MeshFilter:
@@ -62,7 +62,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3735105449441602623}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3906329891482927772}
   - component: {fileID: 4248871597538206176}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Animal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4932120502502170513}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 10
