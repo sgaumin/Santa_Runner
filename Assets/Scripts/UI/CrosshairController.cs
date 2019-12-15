@@ -15,9 +15,11 @@ public class CrosshairController : MonoBehaviour
 	[SerializeField] private float targetScale = 1.5f;
 	[SerializeField] private float animationDuration = 0.02f;
 
-	protected void Awake() => Instance = this;
-
-	private void Start() => Cursor.visible = false;
+    protected void Awake()
+    {
+        Cursor.visible = false;
+        Instance = this;
+    }
 
 	void Update()
 	{
