@@ -17,7 +17,6 @@ public class PresentBehavior : MonoBehaviour
 	[SerializeField] private GameObject[] models;
 
 	private Rigidbody body;
-	private bool hasAlreadyBeenInCollision;
 
 	private void Awake() => body = GetComponent<Rigidbody>();
 
@@ -45,12 +44,6 @@ public class PresentBehavior : MonoBehaviour
 				Instantiate(hitEffect, transform.position, Quaternion.identity, collision.transform);
 				Destroy(this.gameObject);
 			}
-		}
-
-		if (!hasAlreadyBeenInCollision)
-		{
-			hasAlreadyBeenInCollision = true;
-			transform.SetParent(collision.transform, true);
 		}
 	}
 

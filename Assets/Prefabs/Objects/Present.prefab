@@ -4833,7 +4833,7 @@ MonoBehaviour:
   points_increment: 1
   wind_scale: 50
   scoreColliderTag: Chimney
-  timeBeforeDestruction: 5
+  timeBeforeDestruction: 1.6
   hitEffect: {fileID: 8913770515935930007, guid: 3ffda804c0583534da99d3aa89144b55,
     type: 3}
   models:
