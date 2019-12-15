@@ -13,11 +13,13 @@ public class GUIManager : MonoBehaviour
 	[SerializeField] private string defaultScorePrefix = "Score: ";
 	[SerializeField] private Color highScoreColor = Color.yellow;
 
+	[SerializeField] private AudioExpress hitSound;
+
 	protected void Awake() => Instance = this;
 
 	public int Score { get; private set; }
 
-	private void Start() => UpdateScore();
+	private void Start() => scoreTextFiled.text = defaultScorePrefix + Score;
 
 	internal void UpdateScore(int s = 0)
 	{
@@ -28,6 +30,8 @@ public class GUIManager : MonoBehaviour
 		{
 			scoreTextFiled.color = highScoreColor;
 		}
+
+		hitSound.Play(gameObject);
 	}
 
 	internal void updateWindGUI(Vector3 wind_vel)

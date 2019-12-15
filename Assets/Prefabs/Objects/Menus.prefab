@@ -55,6 +55,19 @@ MonoBehaviour:
   windIndicatorRef: {fileID: 1783968364324836376}
   defaultScorePrefix: 'Score '
   highScoreColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hitSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: 2cb4c54a017f55949b44d24608540b60, type: 3}
+    clips: []
+    attached: 1
+    loop: 0
+    isPitchModified: 1
+    pitchMaxVariation: 0.3
+    isStayedWhenLoaddingScene: 0
+    autoDestroy: 0
+    multiplier: 5
+    mixerGroup: {fileID: 3821614284925125273, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
 --- !u!1 &926313544
 GameObject:
   m_ObjectHideFlags: 0
