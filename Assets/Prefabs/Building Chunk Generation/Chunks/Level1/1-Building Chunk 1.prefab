@@ -50,7 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableMovement: 1
-  navMesh: {fileID: 23800000, guid: 6147f2208c319e54d8e1b37386be30cb, type: 2}
+  navMesh: {fileID: 23800000, guid: 006099782535af648b822c65fb0c6f39, type: 2}
+  navMesh_temp: {fileID: 23800000, guid: 6a2580bde4f95e14a850507ddf5e381b, type: 2}
   difficulty: 0
 --- !u!1 &3003167699222589740
 GameObject:
