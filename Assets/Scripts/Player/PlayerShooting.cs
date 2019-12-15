@@ -33,7 +33,7 @@ public class PlayerShooting : MonoBehaviour
 	{
 		if (Game.Instance.GameState == Game.GameStates.Play)
 		{
-			if (Input.GetButtonDown("Fire1") && (Time.time - last_shot_time) > shootCDSeconds)
+			if (Input.GetButton("Fire1") && (Time.time - last_shot_time) > shootCDSeconds)
 			{
 				Plane plane = new Plane(Vector3.up, Vector3.zero);
 				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
