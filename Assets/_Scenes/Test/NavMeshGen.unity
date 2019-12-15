@@ -119,7 +119,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: be57fca6550dc0f4592be992dd04e898, type: 2}
 --- !u!1001 &232981742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Building Chunk 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303290391018749364, guid: 9ac43bc10e7b9384ea071590a67b4390,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5613282187672491399, guid: 9ac43bc10e7b9384ea071590a67b4390,
         type: 3}
