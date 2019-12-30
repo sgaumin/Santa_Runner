@@ -1,6 +1,8 @@
 # Santa Runner
 Project made during the Yogscast GameJam.
 
+You can play the game [here](https://crychair.itch.io/santa-runner).
+
 ## Description
 Ever wonder how Santa's reindeer stay in the air?
 
